@@ -24,17 +24,21 @@ function App() {
 
       setError('')
       }else{
-        setError("Digirte valores químicos para calcular")
+        setError("Digirte valores validos para calcular")
       }
   }, [n1, n2])
 
   return (
-    <>
+    <div className={styles.wrapAll}>
+
       <h1 className={styles.title}>Calculadora</h1>
+      <p>{error}</p>
+
       <div className={styles.wrap}>
-        <input className={styles.input} type="number" onChange={(e) => setN1(e.target.value)} value={n1} placeholder='Insira um numero'/>
-        <input className={styles.input} type="number" onChange={(e) => setN2(e.target.value)} value={n2} placeholder='Insira outro numero'/>
+        <input type="number" onChange={(e) => setN1(e.target.value)} value={n1} placeholder='Insira um numero'/>
+        <input type="number" onChange={(e) => setN2(e.target.value)} value={n2} placeholder='Insira outro numero'/>
       </div>
+      
 
       <div className={styles.wrapResp}>
         <h2>Resultado soma</h2>
@@ -42,7 +46,7 @@ function App() {
       </div>
 
       <div className={styles.wrapResp}>
-        <h2>Resultado soubtração</h2>
+        <h2>Resultado subtração</h2>
         <h3>{respSub}</h3>
       </div>
 
@@ -55,7 +59,7 @@ function App() {
         <h2>Resultado divisão</h2>
         <h3>{respDiv}</h3>
       </div>
-    </>
+    </div>
   )
 }
 

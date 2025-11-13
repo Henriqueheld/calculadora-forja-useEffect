@@ -10,6 +10,20 @@ body {
   align-items: center;
   justify-content: center;
   gap: 50px;
+  background-color: rgb(247, 238, 228); */
+}
 
-  background-color: rgb(247, 238, 228);
+input{
+  padding: 10px;
+  border: none;
+  font-size: 15px;
+  border-radius: 14px;
+  box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.199);
+}
+
+input:focus{
+  outline: none;
+  box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.185);
+  color: rgb(221, 69, 196);
+  font-size: 17px;
 }
